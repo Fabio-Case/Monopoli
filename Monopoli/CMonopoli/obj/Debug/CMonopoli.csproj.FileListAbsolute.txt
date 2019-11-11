@@ -1,0 +1,8 @@
+C:\Users\Fabio\source\Repos\CMonopoli\CMonopoli\bin\Debug\CMonopoli.exe.config
+C:\Users\Fabio\source\Repos\CMonopoli\CMonopoli\bin\Debug\CMonopoli.exe
+C:\Users\Fabio\source\Repos\CMonopoli\CMonopoli\bin\Debug\CMonopoli.pdb
+C:\Users\Fabio\source\Repos\CMonopoli\CMonopoli\obj\Debug\CMonopoli.csprojAssemblyReference.cache
+C:\Users\Fabio\source\Repos\CMonopoli\CMonopoli\obj\Debug\CMonopoli.Properties.Resources.resources
+C:\Users\Fabio\source\Repos\CMonopoli\CMonopoli\obj\Debug\CMonopoli.csproj.GenerateResource.cache
+C:\Users\Fabio\source\Repos\CMonopoli\CMonopoli\obj\Debug\CMonopoli.exe
+C:\Users\Fabio\source\Repos\CMonopoli\CMonopoli\obj\Debug\CMonopoli.pdb
