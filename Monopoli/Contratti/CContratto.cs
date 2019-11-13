@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMonopoli
+namespace Contratti
 {
-    class CContratto
+    public class CContratto
     {
         private int num;
         private String Nome;

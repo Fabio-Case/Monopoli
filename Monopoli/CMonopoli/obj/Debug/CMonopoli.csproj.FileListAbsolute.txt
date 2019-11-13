@@ -14,4 +14,6 @@ C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\D
 C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.csproj.GenerateResource.cache
 C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.exe
 C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.pdb
-C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.Form1.resources
+C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\bin\Debug\Contratti.dll
+C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\bin\Debug\Contratti.pdb
+C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.csproj.CopyComplete
