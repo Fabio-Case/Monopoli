@@ -68,16 +68,16 @@ namespace Contratti
             CostaCasa = casa;
         }
 
-        public bool addCasa(int quantita)
+        public float addCasa(int quantita)
         {
             int tot = Casa + quantita;
             if (tot < 6 && tot >= 0)
             {
                 Casa = tot;
-                return true;
+                return costaCasa*quantita;
             }
             else
-                return false;
+                return -1;
         }
         public String VisualizzaContratto()
         {

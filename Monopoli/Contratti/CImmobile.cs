@@ -98,18 +98,18 @@ namespace Contratti
             else
                 return -1;
         }
-        public bool addCasa(int casa, String nome)
+        public float addCasa(int casa, String nome)
         {
             int i = getPosByName(nome);
             if (i != -1)
             {
-                if (imm[i].addCasa(casa))
-                    return true;
+                if (imm[i].addCasa(casa) != -1)
+                    return imm[i].addCasa(casa);
                 else
-                    return false;
+                    return -1;
             }
             else
-                return false;
+                return -1;
         }
     }
 }
