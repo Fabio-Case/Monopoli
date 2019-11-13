@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Banca
 {
-    public class Class1
+    public class CBanca
     {
+
     }
 }
