@@ -52,13 +52,6 @@ namespace Contratti
 
         public CContratto(String Nome, String colore, float valore_diContratto, float valore_diIpoteca, float[] prezzi, float casa)
         {
-            //if (!"".Equals(Nome) && valore_diContratto != 0.0f && valore_diTerreno != 0.0f && valore_diIpoteca != 0.0f)
-            //{
-            //    this.Nome = Nome;
-            //    this.valore_diContratto = valore_diContratto;
-            //    this.valore_diTerreno = valore_diTerreno;
-            //    this.valore_diIpoteca = valore_diIpoteca;
-            //}
             nome = Nome;
             Colori = colore;
             PrezzoContratto = valore_diContratto;
