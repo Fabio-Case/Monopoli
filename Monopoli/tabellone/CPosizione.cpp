@@ -21,6 +21,20 @@ String CPosizioneClass::toString(int i)
 	return ris;
 }
 
+String CPosizioneClass::toString()
+{
+	String ris = "";
+	if (g1) ris += "Giocatore 1 chiuso";
+	else ris += "Giocatore 1 aperto";
+	if (g2) ris += "Giocatore 2 chiuso";
+	else ris += "Giocatore 2 aperto";
+	if (g3) ris += "Giocatore 3 chiuso";
+	else ris += "Giocatore 3 aperto";
+	if (g4) ris += "Giocatore 4 chiuso";
+	else ris += "Giocatore 4 aperto";
+	return ris;
+}
+
 void CPosizioneClass::setG1(bool g)
 {
 	g1 = g;

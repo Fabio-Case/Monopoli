@@ -14,6 +14,7 @@ class CVectorClass : public CPosizioneClass
 {
  private:
 	 CPosizioneClass vector[MAX];
+  CPosizioneClass g1;
 	 void reset(int g);
  public:
 	void init();
@@ -24,4 +25,3 @@ class CVectorClass : public CPosizioneClass
 extern CVectorClass CVector;
 
 #endif
-

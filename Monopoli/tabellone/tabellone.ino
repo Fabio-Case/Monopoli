@@ -46,6 +46,8 @@ void loop() {
 		p.setgiocatore(1, pos);
 
 	Serial.println(p.toString());
+
+	delay(450);
 }
 
 void settingP()

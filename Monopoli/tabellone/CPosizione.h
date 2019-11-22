@@ -18,6 +18,7 @@ class CPosizioneClass
  public:
 	void init();
 	String toString(int i);
+	String toString();
 	void setG1(bool g);
 	void setG2(bool g);
 	void setG3(bool g);

@@ -57,9 +57,8 @@ String CVectorClass::toString()
 	for (int i = 0; i < MAX; i++)
 		if(vector[i].toString(i) == "")
 			ris += vector[i].toString(i) + "\n";
-	return ris;
+	return g1.toString();
 }
 
 
 CVectorClass CVector;
-

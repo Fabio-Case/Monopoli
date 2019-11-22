@@ -45,7 +45,7 @@ namespace Contratti
             imm[21] = new CContratto("Piazza Giulio Cesare", "Giallo", 28000, 14000, new float[] { 2400, 12000, 36000, 85000, 105000, 125000 }, 15000);
             imm[22] = new CContratto("Via Roma", "Verde", 30000, 15000, new float[] { 2600, 13000, 40000, 90000, 110000, 130000 }, 20000);
             imm[23] = new CContratto("Corso Impero", "Verde", 30000, 15000, new float[] { 2600, 13000, 40000, 90000, 110000, 130000 }, 20000);
-            imm[24] = new CContratto("Largo Augusto", "Fucsia", 32000, 16000, new float[] { 2800, 15000, 45000, 100000, 120000, 140000 }, 20000);
+            imm[24] = new CContratto("Largo Augusto", "Verde", 32000, 16000, new float[] { 2800, 15000, 45000, 100000, 120000, 140000 }, 20000);
             imm[25] = new CContratto("Stazione Est", "stazione", 20000, 10000, new float[] { 2500, 5000, 10000, 20000, 0, 0 }, 0);
             imm[26] = new CContratto("Viale dei Giardini", "Viola", 35000, 17500, new float[] { 3500, 20000, 50000, 110000, 130000, 150000 }, 20000);
             imm[27] = new CContratto("Parco della Vittoria", "Viola", 40000, 20000, new float[] { 5000, 20000, 60000, 140000, 170000, 200000 }, 20000);

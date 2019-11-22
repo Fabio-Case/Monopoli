@@ -17,3 +17,6 @@ C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\D
 C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\bin\Debug\Contratti.dll
 C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\bin\Debug\Contratti.pdb
 C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.csproj.CopyComplete
+C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\bin\Debug\Banca.dll
+C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\bin\Debug\Banca.pdb
+C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.Form1.resources
