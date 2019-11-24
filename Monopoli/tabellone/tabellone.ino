@@ -13,26 +13,27 @@ int static posG1 = 0, posG2 = 0, posG3 = 0, posG4 = 0;
 int pin[MAX];
 void settingP();
 bool chiTocca(String g, int num);
-int numG;
+int numG, giocatore;
 String stringLetta;
 void lettura();
+void invioPos(int giocatoreNum);
 
 void setup() {
 	Serial.begin(9600);
 	settingP();
 	lettura();
-	if (stringLetta.toLowerCase == "n2") {
+	if (stringLetta == "n2") {
 		pinMode(g1, INPUT);
 		pinMode(g2, INPUT);
 		numG = 2;
 	}
-	else if (stringLetta.toLowerCase == "n3") {
+	else if (stringLetta == "n3") {
 		pinMode(g1, INPUT);
 		pinMode(g2, INPUT);
 		pinMode(g3, INPUT);
 		numG = 3;
 	}
-	else if (stringLetta.toLowerCase == "n4") {
+	else if (stringLetta == "n4") {
 		pinMode(g1, INPUT);
 		pinMode(g2, INPUT);
 		pinMode(g3, INPUT);
@@ -52,6 +53,7 @@ void setup() {
 void loop() {
 	lettura(); //in base a che giocatore tocca
 	if (chiTocca(stringLetta, numG));
+
 }
 
 void settingP()
@@ -66,28 +68,55 @@ void settingP()
 
 bool chiTocca(String g, int num)
 {
-	String giocatore = "";
+	String gioc = "";
 	switch (num)
 	{
 	case 2:
-		if (digitalRead(g1) == LOW) giocatore = "g1";
-		else if (digitalRead(g2) == LOW) giocatore = "g2";
+		if (digitalRead(g1) == LOW) {
+			gioc = "g1"; 
+			giocatore = 1;
+		}
+		else if (digitalRead(g2) == LOW) {
+			gioc = "g2";
+			giocatore = 2;
+		}
 		break;
 	case 3:
-		if (digitalRead(g1) == LOW) giocatore = "g1";
-		else if (digitalRead(g2) == LOW) giocatore = "g2";
-		else if (digitalRead(g3) == LOW) giocatore = "g3";
+		if (digitalRead(g1) == LOW) {
+			gioc = "g1";
+			giocatore = 1;
+		}
+		else if (digitalRead(g2) == LOW) {
+			gioc = "g2";
+			giocatore = 2;
+		}
+		else if (digitalRead(g3) == LOW) {
+			gioc = "g3";
+			giocatore = 3;
+		}
 		break;
 	case 4:
-		if (digitalRead(g1) == LOW) giocatore = "g1";
-		else if (digitalRead(g2) == LOW) giocatore = "g2";
-		else if (digitalRead(g3) == LOW) giocatore = "g3";
-		else if (digitalRead(g4) == LOW) giocatore = "g4";
+		if (digitalRead(g1) == LOW) {
+			gioc = "g1";
+			giocatore = 1;
+		}
+		else if (digitalRead(g2) == LOW) {
+			gioc = "g2";
+			giocatore = 2;
+		}
+		else if (digitalRead(g3) == LOW) {
+			gioc = "g3";
+			giocatore = 3;
+		}
+		else if (digitalRead(g4) == LOW) {
+			gioc = "g4";
+			giocatore = 4;
+		}
 		break;
 	default:
 		break;
 	}
-	if (g.toLowerCase == giocatore) {
+	if (g == gioc) {
 		Serial.println("gC"); //giocatore corretto
 		return true;
 	}
@@ -100,13 +129,55 @@ bool chiTocca(String g, int num)
 void lettura()
 {
 	char v[2];
-	if (Serial.available > 0) {
+	if (Serial.available() > 0) {
 		v[0] = Serial.read();
-		while (Serial.available == 0);
-		if (Serial.available > 0)
+		while (Serial.available() == 0);
+		if (Serial.available() > 0)
 			v[1] = Serial.read();
 	}
 	stringLetta = v;
+}
+
+void invioPos(int posgiocatore)
+{
+	int pos, posGiocatore;
+	bool circuitoAperto = true;
+	for (int i = 0; i < MAX && circuitoAperto; i++)
+		if (digitalRead(pin[i]) == HIGH) {
+			pos = i;
+			circuitoAperto = false;
+		}
+
+	switch (giocatore)
+	{
+	case 1:
+		if (pos - posG1 > 1 && pos - posG1 < 13)
+			Serial.println(pos);
+		else
+			Serial.println("EP"); //errore posizione
+		break;
+	case 2:
+		if (pos - posG2 > 1 && pos - posG2 < 13)
+			Serial.println(pos);
+		else
+			Serial.println("EP"); //errore posizione
+		break;
+	case 3:
+		if (pos - posG3 > 1 && pos - posG3 < 13)
+			Serial.println(pos);
+		else
+			Serial.println("EP"); //errore posizione
+		break;
+	case 4:
+		if (pos - posG4 > 1 && pos - posG4 < 13)
+			Serial.println(pos);
+		else
+			Serial.println("EP"); //errore posizione
+		break;
+	default:
+		break;
+	}
+
 }
 
 
