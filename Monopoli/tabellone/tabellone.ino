@@ -5,60 +5,108 @@
 */
 
 // the setup function runs once when you press reset or power the board
-#include "CVector.h"
-CVectorClass p;
-const int g1 = 2, g2 = 3, g3 = 4, g4 = 5;
+
+const int g1 = 2, g2 = 3, g3 = 4, g4 = 5,  MAX = 40;
+const int cS = 6, cN = 7, cC = 8, cP = 9; //cS = SI, cN = NO, cC = compra case, cP = prosegui
+const int lErr = 13; //led di errore utilizzato per test
+int static posG1 = 0, posG2 = 0, posG3 = 0, posG4 = 0;
 int pin[MAX];
 void settingP();
+bool chiTocca(String g, int num);
+int numG;
+String stringLetta;
+void lettura();
 
 void setup() {
-	p.init();
+	Serial.begin(9600);
 	settingP();
-	pinMode(g1, INPUT);
-	pinMode(g2, INPUT);
-	pinMode(g3, INPUT);
-	pinMode(g4, INPUT);
+	lettura();
+	if (stringLetta.toLowerCase == "n2") {
+		pinMode(g1, INPUT);
+		pinMode(g2, INPUT);
+		numG = 2;
+	}
+	else if (stringLetta.toLowerCase == "n3") {
+		pinMode(g1, INPUT);
+		pinMode(g2, INPUT);
+		pinMode(g3, INPUT);
+		numG = 3;
+	}
+	else if (stringLetta.toLowerCase == "n4") {
+		pinMode(g1, INPUT);
+		pinMode(g2, INPUT);
+		pinMode(g3, INPUT);
+		pinMode(g4, INPUT);
+		numG = 4;
+	}
+	pinMode(cS, INPUT);
+	pinMode(cN, INPUT);
+	pinMode(cC, INPUT);
+	pinMode(cP, INPUT);
+	pinMode(lErr, OUTPUT);
 	for (int i = 0; i < MAX; i++)
 		pinMode(pin[i], INPUT);
-
-	Serial.begin(9600);
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() {
-	bool g1 = false, g2 = false, g3 = false, g4 = false;
-	int pos = 0;
-	if (digitalRead(g1) == LOW) g1 = true;
-	if (digitalRead(g2) == LOW) g2 = true;
-	if (digitalRead(g3) == LOW) g3 = true;
-	if (digitalRead(g4) == LOW) g4 = true;
-
-	for (int i = 0; i < MAX; i++)
-		if (digitalRead(pin[i]) == HIGH) pos = i;
-
-	if (g1 == true)
-		p.setgiocatore(1, pos);
-	if (g2 == true)
-		p.setgiocatore(1, pos);
-	if (g3 == true)
-		p.setgiocatore(1, pos);
-	if (g4 == true)
-		p.setgiocatore(1, pos);
-
-	Serial.println(p.toString());
-
-	delay(450);
+	lettura(); //in base a che giocatore tocca
+	if (chiTocca(stringLetta, numG));
 }
 
 void settingP()
 {
-	pin[0] = 7;
 	int pos = 14;
-	for (int i = 1; i < MAX; i++)
+	for (int i = 0; i < MAX; i++)
 	{
 		pin[i] = pos;
 		pos++;
 	}
+}
+
+bool chiTocca(String g, int num)
+{
+	String giocatore = "";
+	switch (num)
+	{
+	case 2:
+		if (digitalRead(g1) == LOW) giocatore = "g1";
+		else if (digitalRead(g2) == LOW) giocatore = "g2";
+		break;
+	case 3:
+		if (digitalRead(g1) == LOW) giocatore = "g1";
+		else if (digitalRead(g2) == LOW) giocatore = "g2";
+		else if (digitalRead(g3) == LOW) giocatore = "g3";
+		break;
+	case 4:
+		if (digitalRead(g1) == LOW) giocatore = "g1";
+		else if (digitalRead(g2) == LOW) giocatore = "g2";
+		else if (digitalRead(g3) == LOW) giocatore = "g3";
+		else if (digitalRead(g4) == LOW) giocatore = "g4";
+		break;
+	default:
+		break;
+	}
+	if (g.toLowerCase == giocatore) {
+		Serial.println("gC"); //giocatore corretto
+		return true;
+	}
+	else {
+		Serial.println("gE"); //giocatore errato
+		return false;
+	}
+}
+
+void lettura()
+{
+	char v[2];
+	if (Serial.available > 0) {
+		v[0] = Serial.read();
+		while (Serial.available == 0);
+		if (Serial.available > 0)
+			v[1] = Serial.read();
+	}
+	stringLetta = v;
 }
 
 
