@@ -111,15 +111,6 @@
       <FileType>CppCode</FileType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CPosizione.h" />
-    <ClInclude Include="CVector.h" />
-    <ClInclude Include="__vm\.tabellone.vsarduino.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="CPosizione.cpp" />
-    <ClCompile Include="CVector.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

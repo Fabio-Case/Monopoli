@@ -17,23 +17,4 @@
   <ItemGroup>
     <None Include="tabellone.ino" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="__vm\.tabellone.vsarduino.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CPosizione.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CVector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="CPosizione.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CVector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
