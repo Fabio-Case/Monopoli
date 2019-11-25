@@ -16,7 +16,9 @@ bool chiTocca(String g, int num);
 int numG, giocatore;
 String stringLetta;
 void lettura();
-void invioPos(int giocatoreNum);
+void invioPos();
+void compraCase();
+bool pagamento();
 
 void setup() {
 	Serial.begin(9600);
@@ -53,7 +55,8 @@ void setup() {
 void loop() {
 	lettura(); //in base a che giocatore tocca
 	if (chiTocca(stringLetta, numG));
-
+	compraCase();
+	pagamento();
 }
 
 void settingP()
@@ -138,9 +141,9 @@ void lettura()
 	stringLetta = v;
 }
 
-void invioPos(int posgiocatore)
+void invioPos()
 {
-	int pos, posGiocatore;
+	int pos;
 	bool circuitoAperto = true;
 	for (int i = 0; i < MAX && circuitoAperto; i++)
 		if (digitalRead(pin[i]) == HIGH) {
@@ -178,6 +181,39 @@ void invioPos(int posgiocatore)
 		break;
 	}
 
+}
+
+void compraCase()
+{
+	int count = 0;
+	do {
+		if (digitalRead(cC) == HIGH) {
+			while (digitalRead(cC) == HIGH) {}
+			count++;
+		}
+	} while (digitalRead(cS) == LOW && digitalRead(cN) == LOW && count < 6);
+	Serial.print("C" + count);
+}
+
+bool pagamento()
+{
+	lettura();
+	if (stringLetta == "CP") {
+		if (digitalRead(cS) == HIGH) {
+			Serial.println("SI");
+			return true;
+		}
+		else if (digitalRead(cN) == HIGH) {
+			Serial.println("NO");
+			return true;
+		}
+		else {
+			Serial.println("nC"); // non confermato ma premuto un altro tasto
+			return false;
+		}
+	}
+	else
+		return false;
 }
 
 
