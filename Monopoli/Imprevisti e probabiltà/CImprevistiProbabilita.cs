@@ -17,6 +17,7 @@ namespace CAzioneInvolontariaObbligatoria
         {
             setProbabilita();
             setImprevisti();
+            mischiaCartellini();
         }
 
         public void setProbabilita()
@@ -61,34 +62,22 @@ namespace CAzioneInvolontariaObbligatoria
 
         }
 
-        public int getProbabilita()
-        {
-            int i = numRandom();
-            int denaro = 0;
-
-            denaro = probabilita[i].denaro;
-            System.Console.WriteLine(probabilita[i].cartellino);
-            return denaro;
-            
-        }
-
-        public int getImprevisti()
-        {
-            int i = numRandom();
-            int denaro = 0;
-
-            denaro = imprevisti[i].denaro;
-            System.Console.WriteLine(imprevisti[i].cartellino);
-            return denaro;
-
-        }
-
-
-        public int numRandom()
+        private void mischiaCartellini()
         {
             Random random = new Random();
-            int numeroCasuale = random.Next(0, 15);
-            return numeroCasuale;
+            for (int i = 0, j = 0; i < MAXEL; i++)
+            {
+                j = random.Next(20);
+                swap(ref imprevisti[j], ref imprevisti[i]);
+                swap(ref probabilita[j], ref probabilita[i]);
+            }
+        }
+
+        private void swap(ref CElementi c1, ref CElementi c2)
+        {
+            CElementi temp = c1;
+            c1 = c2;
+            c2 = temp;
         }
 
     }

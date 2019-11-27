@@ -51,7 +51,11 @@ namespace Contratti
             imm[27] = new CContratto("Parco della Vittoria", "Viola", 40000, 20000, new float[] { 5000, 20000, 60000, 140000, 170000, 200000 }, 20000);
         }
 
-        public CImmobile() => creaContratti(); //inseriti tutti i contratti
+        public CImmobile() 
+        { 
+            creaContratti(); //inseriti tutti i contratti
+            mischiaCartellini(); //mischia i cartellini
+        }
 
         public String visualizzaListaContratti()
         {
@@ -110,6 +114,22 @@ namespace Contratti
             }
             else
                 return -1;
+        }
+        private void mischiaCartellini()
+        {
+            Random random = new Random();
+            for (int i = 0, j = 0; i < MAXEL; i++)
+            {
+                j = random.Next(20);
+                swap(ref imm[j], ref imm[i]);
+            }
+        }
+
+        private void swap(ref CContratto c1, ref CContratto c2)
+        {
+            CContratto temp = c1;
+            c1 = c2;
+            c2 = temp;
         }
     }
 }
