@@ -17,20 +17,30 @@ namespace Giocatore
         public int Soldi { get => soldi; set => soldi = value; }
         public decimal Pos { get => pos; set => pos = value; }
 
-        CCgiocatore(int g)
+        public CCgiocatore(int g)
         {
-            distribuzioneContratti(g);
             pos = 0;
         }
 
-        private void distribuzioneContratti(int g)
+        public int distribuzioneContratti(int g)
         {
             if (g == 2)
+            {
                 contratti = new CContratto[28 / 2];
+                return 28 / 2;
+            }
             else if (g == 3)
+            {
                 contratti = new CContratto[27 / 3];
+                return 27 / 3;
+            }
             else if (g == 4)
+            {
                 contratti = new CContratto[28 / 4];
+                return 28 / 4;
+            }
+            else
+                return 0;
         }
 
         private void distrubuzioneSoldi(int g) 

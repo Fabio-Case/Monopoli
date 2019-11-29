@@ -17,17 +17,16 @@ namespace Banca
 
         public float Soldi { get => soldi; set => soldi = value; }
 
-        public float soldiPerGiocatore(int g)
+        public void soldiPerGiocatore(int g)
         {
             float lire = 0;
             if (g == 2)
-                lire = 350000;
+                lire = 200000 * 2;
             else if (g == 3)
-                lire = 300000;
+                lire = 150000*3;
             else if (g == 4)
-                lire = 250000;
+                lire = 100000 * 4;
             soldi -= lire;
-            return lire;
         }
 
 
