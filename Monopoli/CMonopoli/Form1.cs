@@ -17,7 +17,7 @@ namespace CMonopoli
         public Form1()
         {
             InitializeComponent();
-            InitializeComponent();
+            //InitializeComponent();
             Control.CheckForIllegalCrossThreadCalls = false;
             COM = new SerialPort("COM9", 9600); //creo l'oggetto SerialPort che serve per comunicare con arduino
 
