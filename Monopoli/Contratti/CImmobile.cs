@@ -65,9 +65,9 @@ namespace Contratti
             return ris;
         }
 
-        public String visualizzaContratto(int pos) //superfluo
+        public CContratto visualizzaContratto(int pos) 
         {
-            return imm[pos].VisualizzaContratto();
+            return imm[pos];
         }
         private void BoubbleSortName()
         {
