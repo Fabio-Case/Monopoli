@@ -35,3 +35,8 @@ C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\o
 C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.csproj.CopyComplete
 C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.exe
 C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.pdb
+C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\bin\Debug\Interop.WMPLib.dll
+C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\obj\Debug\Interop.WMPLib.dll
+C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.csproj.ResolveComReference.cache

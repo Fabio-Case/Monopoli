@@ -54,7 +54,7 @@ namespace Contratti
         public CImmobile() 
         { 
             creaContratti(); //inseriti tutti i contratti
-            mischiaCartellini(); //mischia i cartellini
+            //mischiaCartellini(); //mischia i cartellini
         }
 
         public String visualizzaListaContratti()
