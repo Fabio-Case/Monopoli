@@ -58,6 +58,7 @@
     <Compile Include="GraphicForm.Designer.cs">
       <DependentUpon>GraphicForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LetturaScrittura.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

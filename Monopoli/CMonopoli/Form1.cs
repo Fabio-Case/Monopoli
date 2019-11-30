@@ -33,5 +33,10 @@ namespace CMonopoli
         {
             textBox1.Text = COM.ReadLine();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

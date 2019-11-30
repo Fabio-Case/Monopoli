@@ -12,6 +12,7 @@ namespace CMonopoli
 {
     public partial class GraphicForm : Form
     {
+        
         public GraphicForm()
         {
             InitializeComponent();
