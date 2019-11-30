@@ -50,6 +50,10 @@
       <Project>{c4004fc2-f59a-415e-a654-838549e5242a}</Project>
       <Name>Banca</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CMonopoli\CMonopoli.csproj">
+      <Project>{b7679e20-914a-4ab2-b9fa-31ebfc745aff}</Project>
+      <Name>CMonopoli</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Contratti\Contratti.csproj">
       <Project>{4fdd7285-9afd-426a-9c67-d7a0ecb7e3bb}</Project>
       <Name>Contratti</Name>
