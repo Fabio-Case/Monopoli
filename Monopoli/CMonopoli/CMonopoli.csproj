@@ -46,8 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CCgiocatore.cs" />
-    <Compile Include="CGiocatori.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +97,10 @@
     <ProjectReference Include="..\Contratti\Contratti.csproj">
       <Project>{4fdd7285-9afd-426a-9c67-d7a0ecb7e3bb}</Project>
       <Name>Contratti</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Giocatore\Giocatore.csproj">
+      <Project>{8571dc2e-cac1-4564-8974-0b10c5696552}</Project>
+      <Name>Giocatore</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

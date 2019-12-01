@@ -37,7 +37,7 @@ namespace CAzioneInvolontariaObbligatoria
             probabilita[12] = new CElementi("Ritornate al Vicolo Corto",0,"Vicolo Corto");
             probabilita[13] = new CElementi("Scade il Vostro premio di assicurazione: pagate 5.000 lire",5000,"");
             probabilita[14] = new CElementi("Siete creditore verso Banca di 20.000 lire: ritiratele",20000,"");
-            probabilita[15] = new CElementi("Uscite gratis di prigione, se ci siete: potete conservare questo cartoncino sino al momento di servirvene(non si sa mai!) oppure venderlo",0"");
+            probabilita[15] = new CElementi("Uscite gratis di prigione, se ci siete: potete conservare questo cartoncino sino al momento di servirvene(non si sa mai!) oppure venderlo",0,"");
 
         }
         public void setImprevisti()

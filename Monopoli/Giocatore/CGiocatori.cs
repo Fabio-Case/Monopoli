@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Giocatore
 {
-    class CGiocatori
+    public class CGiocatori
     {
         CCgiocatore[] giocatori;
         CImmobile imm;

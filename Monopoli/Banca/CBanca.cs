@@ -17,7 +17,7 @@ namespace Banca
 
         public float Soldi { get => soldi; set => soldi = value; }
 
-        public void soldiPerGiocatore(int g)
+        public void SoldiPerGiocatore(int g)
         {
             float lire = 0;
             if (g == 2)

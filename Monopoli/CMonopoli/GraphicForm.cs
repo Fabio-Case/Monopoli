@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Giocatore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,14 +41,21 @@ namespace CMonopoli
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBoxGioc2.SelectedItem == "G1")
-                label1.Text = textBoxNome.Text;
-            else if (comboBoxGioc2.SelectedItem == "G2")
-                label2.Text = textBoxNome.Text;
-            else if (comboBoxGioc2.SelectedItem == "G3")
-                label3.Text = textBoxNome.Text;
-            else if (comboBoxGioc2.SelectedItem == "G4")
-                label4.Text = textBoxNome.Text;
+            switch (comboBoxGioc2.SelectedItem)
+            {
+                case "G1":
+                    label1.Text = textBoxNome.Text;
+                    break;
+                case "G2":
+                    label2.Text = textBoxNome.Text;
+                    break;
+                case "G3":
+                    label3.Text = textBoxNome.Text;
+                    break;
+                case "G4":
+                    label4.Text = textBoxNome.Text;
+                    break;
+            }
         }
 
         private void start_Click(object sender, EventArgs e)
