@@ -16,6 +16,8 @@ namespace CMonopoli
         public GraphicForm()
         {
             InitializeComponent();
+            Form2 Form2 = new Form2();
+            Form2.ShowDialog();
             webBrowser1.Url = new Uri("https://it.wikipedia.org/wiki/Monopoly");
         }
 

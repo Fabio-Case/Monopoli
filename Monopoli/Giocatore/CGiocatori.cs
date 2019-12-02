@@ -24,18 +24,25 @@ namespace CMonopoli
         
         private void cartellini()
         {
-            int c = giocatori[0].distribuzioneContratti(gioc);
-            CCgiocatore g = new CCgiocatore(gioc);
-            int cartellini = g.distribuzioneContratti(gioc);
-            int j = 0;
-            for (int i = 0; i < gioc; i++)
+            try
             {
-                while (j < g.distribuzioneContratti(gioc))
+                int c = giocatori[0].distribuzioneContratti(gioc);
+                CCgiocatore g = new CCgiocatore(gioc);
+                int cartellini = g.distribuzioneContratti(gioc);
+                int j = 0;
+                for (int i = 0; i < gioc; i++)
                 {
-                    giocatori[i].Contratti[j] = imm.visualizzaContratto(j);
-                    j++;
+                    while (j < g.distribuzioneContratti(gioc))
+                    {
+                        giocatori[i].Contratti[j] = imm.visualizzaContratto(j);
+                         j++;
+                    }
                 }
+            }catch(Exception e)
+            {
+
             }
+            
         }
     }
 }
