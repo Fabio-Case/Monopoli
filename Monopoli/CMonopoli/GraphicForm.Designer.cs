@@ -83,8 +83,9 @@
             this.webBrowser1.Location = new System.Drawing.Point(669, 22);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(533, 702);
+            this.webBrowser1.Size = new System.Drawing.Size(748, 737);
             this.webBrowser1.TabIndex = 4;
+            this.webBrowser1.Url = new System.Uri("http://e3", System.UriKind.Absolute);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // g2
@@ -219,7 +220,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 736);
+            this.ClientSize = new System.Drawing.Size(1429, 756);
             this.Controls.Add(this.comboBoxGioc2);
             this.Controls.Add(this.start);
             this.Controls.Add(this.comboBoxGioc);
