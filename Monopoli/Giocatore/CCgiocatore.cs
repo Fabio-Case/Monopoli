@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Giocatore
+namespace CMonopoli
 {
     public class CCgiocatore
     {
@@ -26,20 +26,17 @@ namespace Giocatore
         {
             if (g == 2)
             {
-                int c = 14;
-                contratti = new CContratto[c];
+                contratti = new CContratto[28 / 2];
                 return 28 / 2;
             }
             else if (g == 3)
             {
-                int c = 9;
-                contratti = new CContratto[c];
+                contratti = new CContratto[27 / 3];
                 return 27 / 3;
             }
             else if (g == 4)
             {
-                int c = 7;
-                contratti = new CContratto[c];
+                contratti = new CContratto[28 / 4];
                 return 28 / 4;
             }
             else

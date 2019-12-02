@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Giocatore
+namespace CMonopoli
 {
     public class CGiocatori
     {
@@ -27,9 +27,15 @@ namespace Giocatore
             int c = giocatori[0].distribuzioneContratti(gioc);
             CCgiocatore g = new CCgiocatore(gioc);
             int cartellini = g.distribuzioneContratti(gioc);
+            int j = 0;
             for (int i = 0; i < gioc; i++)
-                for (int j = i * cartellini; j < cartellini * (i + 1); j++)
-                    giocatori[i].Contratti[i] = imm.visualizzaContratto(j);
+            {
+                while (j < g.distribuzioneContratti(gioc))
+                {
+                    giocatori[i].Contratti[j] = imm.visualizzaContratto(j);
+                    j++;
+                }
+            }
         }
     }
 }
