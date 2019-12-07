@@ -49,3 +49,6 @@ C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\D
 C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\bin\Debug\Giocatore.dll
 C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\bin\Debug\Giocatore.pdb
 C:\Users\colombo_francesco\Source\Repos\Fabio-Case\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.Form2.resources
+C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\bin\Debug\Giocatore.dll
+C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\bin\Debug\Giocatore.pdb
+C:\Users\Fabio\Desktop\test_circuito\soluzione\Monopoli\Monopoli\CMonopoli\obj\Debug\CMonopoli.Form2.resources

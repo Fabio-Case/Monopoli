@@ -220,7 +220,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1429, 756);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.comboBoxGioc2);
             this.Controls.Add(this.start);
             this.Controls.Add(this.comboBoxGioc);

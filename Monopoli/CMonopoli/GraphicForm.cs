@@ -67,6 +67,8 @@ namespace CMonopoli
         private void comboBoxGioc_SelectedIndexChanged(object sender, EventArgs e)
         {
             player = new CGiocatori(comboBoxGioc.SelectedIndex + 2);
+            MessageBox.Show(player.setup());
+            
         }
     }
 }
