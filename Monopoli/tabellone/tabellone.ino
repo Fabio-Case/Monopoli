@@ -6,9 +6,9 @@
 
 // the setup function runs once when you press reset or power the board
 
-const int g1 = 2, g2 = 3, g3 = 4, g4 = 5,  MAX = 40;
-const int cS = 6, cN = 7, cC = 8, cP = 9; //cS = SI, cN = NO, cC = compra case, cP = prosegui
-const int lErr = 13; //led di errore utilizzato per test
+const int g1 = 9, g2 = 10, g3 = 11, g4 = 12,  MAX = 4;
+const int cS = 3, cN = 4, cC = 5, cP = 6; //cS = SI, cN = NO, cC = compra case, cP = prosegui
+
 int static posG1 = 0, posG2 = 0, posG3 = 0, posG4 = 0;
 int pin[MAX];
 void settingP();
@@ -46,7 +46,6 @@ void setup() {
 	pinMode(cN, INPUT);
 	pinMode(cC, INPUT);
 	pinMode(cP, INPUT);
-	pinMode(lErr, OUTPUT);
 	for (int i = 0; i < MAX; i++)
 		pinMode(pin[i], INPUT);
 }
@@ -62,11 +61,19 @@ void loop() {
 void settingP()
 {
 	int pos = 14;
-	for (int i = 0; i < MAX; i++)
+  pin[0] = 2;
+  int i;
+	for (i = 1; i < 27; i++)
 	{
 		pin[i] = pos;
 		pos++;
 	}
+  pos++;
+  for (i = 27; i < MAX; i++)
+  {
+    pin[i] = pos;
+    pos++;
+  }
 }
 
 bool chiTocca(String g, int num)
@@ -215,5 +222,3 @@ bool pagamento()
 	else
 		return false;
 }
-
-

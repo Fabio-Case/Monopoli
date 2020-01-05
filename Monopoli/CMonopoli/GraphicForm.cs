@@ -70,5 +70,10 @@ namespace CMonopoli
             MessageBox.Show(player.setup());
             
         }
+
+        private void g4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

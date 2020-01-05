@@ -139,6 +139,7 @@
             this.g4.Name = "g4";
             this.g4.Size = new System.Drawing.Size(120, 420);
             this.g4.TabIndex = 9;
+            this.g4.SelectedIndexChanged += new System.EventHandler(this.g4_SelectedIndexChanged);
             // 
             // textBoxNome
             // 
